@@ -3,6 +3,29 @@
   "displayName": "Brownie",
   "description": "Visual Studio Code theme with the taste of the salted caramel brownie.",
   "version": "0.1.0",
+  "publisher": "gregadro",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gregadro/brownie-theme"
+  },
+  "keywords": [
+    "Theme",
+    "Dark Theme",
+    "Brownie",
+    "Brown",
+    "Caramel",
+    "Cookie",
+    "Sweet",
+    "Salt",
+    "Warm Colors",
+    "Accessible Theme"
+  ],
+  "galleryBanner": {
+    "color": "#553129ff",
+    "theme": "dark"
+  },
   "engines": {
     "vscode": "^1.63.0"
   },
