@@ -1,0 +1,39 @@
+:root {
+  --preparation-padding: 0 32px;
+}
+
+html {
+  margin: 16px 32px;
+  background-color: #57413e;
+  font-family: "Lexend Deca", sans-serif;
+  color: #f0f0f0;
+}
+
+a {
+  color: #d67450;
+  text-decoration: none;
+}
+
+.title {
+  color: #ee9a4f;
+}
+
+.recepie {
+  display: flex;
+}
+
+.ingredients {
+  width: 500px;
+}
+
+.ingredients li {
+  padding: 4px 0;
+}
+
+.preparation {
+  padding: var(--preparation-padding);
+}
+
+.preparation li {
+  padding: 16px 0;
+}
