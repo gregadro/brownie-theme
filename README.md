@@ -27,9 +27,13 @@ And if you want to say a thank you, you can buy me a coffee and support me even 
 # Screenshots
 
 HTML
+![HTML Example](./screenshots/html-example.jpg)
 
 Vue.js
+![Vue.js Example](./screenshots/vuejs-example.jpg)
 
 JavaScript
+![Javascript Example](./screenshots/javascript-example.jpg)
 
 CSS
+![CSS Example](./screenshots/css-example.jpg)
