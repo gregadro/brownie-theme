@@ -1,8 +1,8 @@
-<p style="text-align: center;">
-   <img src="icon.png" alt="Brownie Logo" width="150" />
+<p align="center">
+   <a href="https://marketplace.visualstudio.com/items?itemName=gregadro.brownie"><img src="icon.png" alt="Brownie Logo" width="150" /></a>
 </p>
 
-# <p style="text-align: center;">🍪 [Brownie Theme for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=gregadro.brownie)</p>
+# <p align="center">🍪 [Brownie Theme for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=gregadro.brownie)</p>
 
 Experience the same pleasure when coding as when you are eating the delicious caramel salted brownie. That is where the inspiration came from. Carefully selected colors soothe the eyes as brownie would soothe your sugar craving.
 
