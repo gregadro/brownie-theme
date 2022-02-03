@@ -2,14 +2,14 @@
   "name": "Brownie",
   "type": "dark",
   "colors": {
-    "foreground": "#fff8f1",
+    "foreground": "#ad9073",
     "focusBorder": "#ad9073",
 
     "widget.shadow": "#2c2c2c00",
 
     "icon.foreground": "#d4a373",
 
-    "selection.background": "#bb7423",
+    "selection.background": "#6b2400",
 
     "textLink.foreground": "#bb7423",
 
@@ -60,6 +60,7 @@
 
     "list.activeSelectionBackground": "#7a5b50",
     "list.highlightForeground": "#fff8f1",
+    "list.filterMatchBackground": "#6b2400",
     "listFilterWidget.background": "#222222",
     "listFilterWidget.outline": "#bb7423",
 
