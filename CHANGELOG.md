@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://github.com/gregadro/brownie-theme/blob/main/CHANGELOG.md)
 
+## [0.2.1](https://github.com/gregadro/brownie-theme/blob/main/CHANGELOG.md) - 2022-02-04
+
+### Changed
+
+- Changed selected text background color in inputs
+- Changed matched text background color in list/tree
+
+### Fixed
+
+- Fixed overall foreground color
+
 ## [0.2.0](https://github.com/gregadro/brownie-theme/blob/main/CHANGELOG.md) - 2022-02-03
 
 ### Added
