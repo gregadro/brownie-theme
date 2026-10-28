@@ -1,0 +1,55 @@
+@use "sass:math";
+@use "sass:color";
+
+// Brownie palette
+$chocolate: #211a16;
+$caramel: #d4a373;
+$toppings: (
+  "caramel": $caramel,
+  "walnut": #8c5a2b,
+  "sea-salt": #a3bcc0,
+);
+
+@mixin card($padding: 1.5rem, $radius: 12px) {
+  padding: $padding;
+  border-radius: $radius;
+  background: color.adjust($chocolate, $lightness: 5%);
+}
+
+@function rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+.recipe {
+  @include card;
+  font-size: rem(18px);
+
+  &__title {
+    color: $caramel;
+
+    &:hover {
+      color: color.scale($caramel, $lightness: 20%);
+    }
+  }
+
+  @each $name, $color in $toppings {
+    .topping--#{$name} {
+      border-left: 4px solid $color;
+    }
+  }
+
+  @media (width < 600px) {
+    padding: rem(12px);
+  }
+}
+
+%button-base {
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  @extend %button-base;
+  background: $caramel;
+  color: $chocolate;
+}
