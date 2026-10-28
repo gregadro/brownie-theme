@@ -1,39 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+/* Brownie palette */
 :root {
-  --preparation-padding: 0 32px;
+  --chocolate: #211a16;
+  --caramel: #d4a373;
+  --cream: #f1e4d3;
+  --radius: 0.75rem;
+  --gap: clamp(1rem, 2vw, 2rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-  margin: 16px 32px;
-  background-color: #57413e;
-  font-family: "Lexend Deca", sans-serif;
-  color: #f0f0f0;
+  font-family: "Lexend Deca", system-ui, sans-serif;
+  background-color: var(--chocolate);
+  color: var(--cream);
 }
 
-a {
-  color: #d67450;
-  text-decoration: none;
+.recipe {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: calc(var(--gap) * 2);
 }
 
-.title {
-  color: #ee9a4f;
+.recipe__title {
+  color: var(--caramel);
+  font-size: 2.5rem;
+  line-height: 1.1;
 }
 
-.recepie {
-  display: flex;
+#salted-caramel a:hover,
+#salted-caramel a:focus-visible {
+  color: rgb(242 160 78 / 80%);
+  text-decoration: underline dotted;
 }
 
-.ingredients {
-  width: 500px;
+.ingredients li::marker {
+  content: "🍫 ";
 }
 
-.ingredients li {
-  padding: 4px 0;
+.rating button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed !important;
 }
 
-.preparation {
-  padding: var(--preparation-padding);
+@media (prefers-color-scheme: light) {
+  :root {
+    --chocolate: #fbf5ee;
+    --cream: #3b2a20;
+  }
 }
 
-.preparation li {
-  padding: 16px 0;
+@keyframes melt {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0.9) translateY(4px);
+  }
 }

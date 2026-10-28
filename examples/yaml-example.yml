@@ -1,0 +1,30 @@
+# Bakery deploy pipeline
+name: Bake & ship
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 6 * * 1-5" # every weekday at 6:00
+
+env:
+  OVEN_TEMPERATURE: 180
+  SALTED: true
+
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      matrix:
+        flavor: [salted-caramel, walnut, double-chocolate]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Mix the batter
+        run: |
+          echo "Baking ${{ matrix.flavor }} at $OVEN_TEMPERATURE°C"
+          npm ci && npm run build
+      - name: Taste test
+        if: ${{ github.event_name == 'push' }}
+        run: npm test
+        continue-on-error: false

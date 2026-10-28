@@ -1,0 +1,24 @@
+{
+  "name": "Salted Caramel Brownie",
+  "servings": 16,
+  "vegan": false,
+  "notes": null,
+  "oven": {
+    "temperature": 180,
+    "unit": "°C",
+    "rack": {
+      "position": "middle",
+      "pan": {
+        "size": "20x20 cm",
+        "lining": {
+          "type": "parchment paper",
+          "greased": true
+        }
+      }
+    }
+  },
+  "ingredients": [
+    { "item": "butter", "amount": 170, "unit": "g" },
+    { "item": "sugar", "amount": 200, "unit": "g" }
+  ]
+}

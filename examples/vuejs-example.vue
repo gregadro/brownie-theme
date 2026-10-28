@@ -7,56 +7,51 @@
     </a>
     by {{ author }}
   </h3>
-	<button v-if="member" @click="shareRecipe"
-  <section class="recepie">
+  <button v-if="isMember" @click="shareRecipe">Share</button>
+  <section class="recipe">
     <div class="ingredients">
       <h2 class="ingredients__title">Ingredients</h2>
       <h4>
-        <i>(for 16 servings)</i>
+        <i>(for {{ servings }} servings)</i>
       </h4>
       <ul>
-        <li
-          v-for="(ingredient, idx) from ingredients"
-          :key="`ingredient_${idx}`"
-        >
+        <li v-for="(ingredient, idx) in ingredients" :key="`ingredient_${idx}`">
           {{ ingredient }}
         </li>
       </ul>
     </div>
-    <div class="preparation">
-      <h2 class="preparation__title">Preparation</h2>
-      <ol>
-        <li>
-          Preheat the oven to 350°F (180°C). Grease an 8x8-inch (20x20-cm)
-          baking pan and line with parchment paper.
-        </li>
-        <li>
-          ...
-        </li>
-
-      </ol>
-    </div>
+    <RecipeSteps :steps="steps" />
   </section>
 </template>
 
-<script>
-export default {
-  name: 'VueJsExample',
-  data: () => ({
-    author: 'Katie Aubin',
-		member: true,
-    ingredients: [
-      'nonstick cooking spray, for greasing',
-      '12 tablespoons unsalted butter, 1 1/2 sticks, melted',
-      '1 cup granulated sugar (200 g)',
-      '1/2 cup brown sugar (110 g)',
-      // ... and more delicious stuff
-    ],
-  }),
-	methods: {
-		shareRecipe() {
-			// Share this awesome recipe
-		},
-	},
-};
+<script setup lang="ts">
+import { ref, computed } from "vue";
+import RecipeSteps from "./RecipeSteps.vue";
+
+const props = defineProps<{ author: string; isMember?: boolean }>();
+
+const servings = ref(16);
+const ingredients = ref<string[]>([
+  "nonstick cooking spray, for greasing",
+  "12 tablespoons unsalted butter, 1 1/2 sticks, melted",
+  "1 cup granulated sugar (200 g)",
+  "1/2 cup brown sugar (110 g)",
+  // ... and more delicious stuff
+]);
+
+const steps = computed(() => [
+  `Preheat the oven to ${props.isMember ? 175 : 180}°C.`,
+  "Grease an 8x8-inch (20x20-cm) baking pan.",
+]);
+
+function shareRecipe(): void {
+  // Share this awesome recipe
+  navigator.clipboard.writeText(window.location.href);
+}
 </script>
+
+<style scoped>
+.title {
+  color: #d4a373;
+}
+</style>
